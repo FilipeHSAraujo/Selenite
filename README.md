@@ -27,7 +27,7 @@ Selenite is an **automated testing hub with Selenium** made for **QAs, testers, 
 
 python selenite.py
 
-## 🎯 Who is this for?
+🎯 Who is this for?
 
 Manual QAs: Automate repetitive tests
 
@@ -37,7 +37,7 @@ Freelancers: Check websites in minutes
 
 Students: Practical Selenium learning
 
-##🛠️ Roadmap (Coming soon)
+🛠️ Roadmap (Coming soon)
 
 GUI (Tkinter)
 
@@ -57,17 +57,17 @@ Found a bug? Open an issue
 
 Want to add something? Send a Pull Request
 
-##📄 License
+📄 License
 
 This project is licensed under the MIT License — use, modify, and distribute it freely.
 
-##💡 Selenite Philosophy
+💡 Selenite Philosophy
 
 "A good tester doesn't write code. They make the code work for them."
 
 Selenite — Because testing doesn't have to be complicated. Made with ❤️, Python, and automation by Filipe Araujo.
 
-## 🚀 Installation
+🚀 Installation
 
 ```bash
 git clone [https://github.com/YOUR_USER/selenite.git](https://github.com/YOUR_USER/selenite.git)
