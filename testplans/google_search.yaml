@@ -1,0 +1,12 @@
+name: "Google Search Smoke Test"
+url: "https://google.com"
+steps:
+  - action: fill
+    selector: 'textarea[name="q"]'
+    value: "Selenite QA Filipe Araujo"
+  - action: press_enter
+  - action: wait
+    seconds: 3
+  - action: assert_text
+    selector: "div#search"
+    contains: "github.com"

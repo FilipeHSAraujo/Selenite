@@ -1,0 +1,31 @@
+name: "SauceDemo Checkout Completo"
+url: "https://www.saucedemo.com"
+steps:
+  - action: fill
+    selector: "#user-name"
+    value: "standard_user"
+  - action: fill
+    selector: "#password"
+    value: "secret_sauce"
+  - action: click
+    selector: "#login-button"
+  - action: click
+    selector: "#add-to-cart-sauce-labs-backpack"
+  - action: click
+    selector: ".shopping_cart_link"
+  - action: click
+    selector: "#checkout"
+  - action: fill
+    selector: "#first-name"
+    value: "Filipe"
+  - action: fill
+    selector: "#last-name"
+    value: "Araujo"
+  - action: fill
+    selector: "#postal-code"
+    value: "88000-000"
+  - action: click
+    selector: "#continue"
+  - action: assert_text
+    selector: ".summary_total_label"
+    contains: "$32.39"

@@ -1,0 +1,16 @@
+name: "GitHub Login (erro esperado)"
+url: "https://github.com/login"
+steps:
+  - action: fill
+    selector: "#login_field"
+    value: "tester_selenite"
+  - action: fill
+    selector: "#password"
+    value: "12345678"
+  - action: click
+    selector: 'input[name="commit"]'
+  - action: wait_visible
+    selector: ".flash-error"
+  - action: assert_text
+    selector: ".flash-error"
+    contains: "Incorrect"
