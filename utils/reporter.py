@@ -1,4 +1,4 @@
-# utils/reporter.py
+#Imports
 import os
 import pandas as pd
 from datetime import datetime
@@ -8,7 +8,7 @@ from colorama import Fore, Style, init
 
 init(autoreset=True)
 
-
+#Functions
 class TestReporter:
     def __init__(self, plan_name, plan_url=""):
         self.plan_name = plan_name.replace(" ", "_").replace("/", "_")

@@ -1,4 +1,4 @@
-# selenite.py
+#Imports
 import os
 import yaml 
 import time
@@ -14,6 +14,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from utils.reporter import TestReporter
 
+#Functions
 def run_plan(yaml_file):
     with open(yaml_file, encoding='utf-8') as f:
         plan = yaml.safe_load(f)
@@ -51,7 +52,7 @@ def run_plan(yaml_file):
                     if step["contains"] not in text:
                         raise Exception(f"Texto esperado não encontrado: {step['contains']}")
                 
-                # Print de sucesso
+                # Prints
                 screenshot_path = reporter.save_screenshot(driver, f"{i+1:02d}_{step['action']}")
 
             except Exception as e:
@@ -74,6 +75,7 @@ def run_plan(yaml_file):
         driver.quit()
         reporter.generate_reports()
 
+#Program
 if __name__ == "__main__":
     plans = [f for f in os.listdir("testplans") if f.endswith(".yaml")]
     print("SELENITE V2.0 – Testes disponíveis:\n")
