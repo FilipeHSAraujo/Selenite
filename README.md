@@ -39,7 +39,7 @@ Selenite is a **no-code automated testing hub built with Selenium**, designed fo
 git clone https://github.com/YOUR_USER/selenite.git
 cd selenite
 pip install -r requirements.txt
-
+'''
 
 ▶️ How to Use
 
