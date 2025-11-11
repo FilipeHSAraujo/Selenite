@@ -190,3 +190,4 @@ if __name__ == "__main__":
         run_plan(f"testplans/{plans[int(choice)-1]}")
     else:
         print(f"{Fore.RED}Invalid option! Try again.{Style.RESET_ALL}")
+
