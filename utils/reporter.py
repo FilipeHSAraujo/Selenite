@@ -3,7 +3,7 @@
 SELENITE V2.0 – Test Reporter Module
 Generates:
 - Excel: Full test plan execution
-- Word: Only defects (ready for Jira/Azure/Dev)
+- Word: Only defects 
 Author: Filipe Araujo
 """
 
