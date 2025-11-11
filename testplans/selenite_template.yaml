@@ -1,0 +1,148 @@
+# =============================================================================
+# SELENITE TEST PLAN – YAML TEMPLATE
+# =============================================================================
+# 
+# This is a complete, commented YAML test plan for Selenite.
+# Use it as a template to create your own automated tests.
+# All fields are explained below.
+#
+# TIP: Copy this file to testplans/your_test_name.yaml and edit as needed.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# name: (required)
+#   Human-readable name of the test.
+#   Will be used in reports and folder names.
+#   Example: "Google Search Smoke Test"
+# -----------------------------------------------------------------------------
+name: "GitHub Login (erro esperado)"
+
+# -----------------------------------------------------------------------------
+# url: (required)
+#   Full URL of the website to test.
+#   Must include https:// or http://
+#   Selenite will open this page first.
+# -----------------------------------------------------------------------------
+url: "https://github.com/login"
+
+# -----------------------------------------------------------------------------
+# timeout: (optional)
+#   Global timeout in seconds for wait_visible actions.
+#   Default: 20
+#   Increase if your site is slow.
+# -----------------------------------------------------------------------------
+timeout: 20
+
+# -----------------------------------------------------------------------------
+# headless: (optional)
+#   Run Chrome in headless mode (no visible browser)?
+#   true = no browser window
+#   false = visible browser (recommended for debugging)
+#   Default: false
+# -----------------------------------------------------------------------------
+headless: false
+
+# -----------------------------------------------------------------------------
+# steps: (required)
+#   List of actions to execute in order.
+#   Each step is a dictionary with:
+#     - action: the command to run
+#     - selector: CSS or XPath (required for most actions)
+#     - value / contains / seconds: action-specific data
+#     - description: (optional) human explanation
+# -----------------------------------------------------------------------------
+steps:
+  # -------------------------------------------------------------------------
+  # ACTION: fill
+  #   Types text into an input field.
+  #   selector: CSS or XPath of the <input>, <textarea>, etc.
+  #   value: text to type
+  # -------------------------------------------------------------------------
+  - action: fill
+    selector: "#login_field"
+    value: "tester_selenite"
+    description: "Preenche o campo de usuário com um login válido"
+
+  # -------------------------------------------------------------------------
+  # ACTION: fill
+  #   Same as above, but for password.
+  #   Note: Selenite does NOT mask passwords in logs.
+  # -------------------------------------------------------------------------
+  - action: fill
+    selector: "#password"
+    value: "12345678"
+    description: "Preenche a senha (intencionalmente errada)"
+
+  # -------------------------------------------------------------------------
+  # ACTION: click
+  #   Clicks on an element.
+  #   selector: any clickable element (button, link, div, etc.)
+  # -------------------------------------------------------------------------
+  - action: click
+    selector: 'input[name="commit"]'
+    description: "Clica no botão 'Sign in'"
+
+  # -------------------------------------------------------------------------
+  # ACTION: wait_visible
+  #   Waits until an element becomes visible.
+  #   Uses WebDriverWait with timeout from 'timeout' field.
+  #   Useful after clicks that trigger page changes.
+  # -------------------------------------------------------------------------
+  - action: wait_visible
+    selector: ".flash-error"
+    description: "Espera a mensagem de erro aparecer"
+
+  # -------------------------------------------------------------------------
+  # ACTION: assert_text
+  #   Checks if an element contains expected text.
+  #   contains: substring to look for (case-sensitive)
+  #   Use 'exact' instead if you need full match.
+  #   Fails the test if text is not found.
+  # -------------------------------------------------------------------------
+  - action: assert_text
+    selector: ".flash-error"
+    contains: "Incorrect"
+    description: "Valida que a mensagem de erro contém 'Incorrect'"
+
+  # -------------------------------------------------------------------------
+  # MORE ACTIONS YOU CAN USE:
+  # -------------------------------------------------------------------------
+  # - action: press_enter
+  #     Sends ENTER key to the currently focused element
+  #
+  # - action: wait
+  #     seconds: 3
+  #     Pauses execution for N seconds
+  #
+  # - action: screenshot
+  #     name: "after_login"
+  #     Takes a manual screenshot at this point
+  #
+  # - action: refresh
+  #     Refreshes the current page
+  #
+  # - action: switch_to_frame
+  #     selector: "#iframe_id"
+  #     Switches context to an iframe
+  #
+  # - action: switch_to_default
+  #     Returns to main page context
+  # -------------------------------------------------------------------------
+
+# =============================================================================
+# END OF TEMPLATE
+# =============================================================================
+# 
+# How to run:
+#   1. Save as testplans/github_login_fail.yaml
+#   2. Run: python selenite.py
+#   3. Select your test from the menu
+#
+# Reports will be generated in:
+#   reports/GitHub_Login_erro_esperado_20251111_074000/
+#     ├── GitHub_Login_erro_esperado_EXECUTION_PLAN.xlsx
+#     ├── GitHub_Login_erro_esperado_DEFECTS.docx (only if FAIL)
+#     └── screenshots/
+#
+# Made with Selenite – No-Code Selenium Testing
+# =============================================================================
