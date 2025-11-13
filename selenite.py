@@ -1,7 +1,7 @@
 # selenite.py
 # -*- coding: utf-8 -*-
 """
-SELENITE V1.1 – No-Code Selenium Test Hub
+SELENITE V0.1 – Selenium Test Hub
 Author: Filipe Araujo
 GitHub: https://github.com/FilipeHSAraujo/Selenite
 """
@@ -171,7 +171,7 @@ if __name__ == "__main__":
     plans = [f for f in os.listdir("testplans") if f.endswith(".yaml")]
 
     print(f"\n{Fore.MAGENTA}{'='*60}")
-    print(f"{' SELENITE V2.0 – NO-CODE TEST HUB ':-^60}")
+    print(f"{' SELENITE V0.1 – TEST HUB ':-^60}")
     print(f"{'='*60}{Style.RESET_ALL}\n")
 
     if plans:
