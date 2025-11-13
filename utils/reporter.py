@@ -1,6 +1,6 @@
 # utils/reporter.py
 """
-SELENITE V2.0 – Test Reporter Module
+SELENITE V0.1 – Test Reporter Module
 Generates:
 - Excel: Full test plan execution
 - Word: Only defects (ready for Jira/Azure/Dev)
