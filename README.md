@@ -1,4 +1,4 @@
-# 🌟 Selenite
+# 🌟 Selenite – No-Code Automated Testing Hub
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
@@ -7,146 +7,110 @@
 
 > **Test websites in 3 clicks. No code required.**
 
-Selenite is a **no-code automated testing hub built with Selenium**, designed for **QAs, testers, and agile teams** who need to **quickly validate websites** — without writing any code.
+**Selenite** é uma ferramenta de **automação de testes web no-code**, construída com **Python + Selenium**, pensada para **QAs, testers, estudantes e equipes ágeis** que precisam validar websites de forma rápida — **sem escrever código**.
 
-> **"Enter the link. Define the steps. Selenite does the rest."**
-
----
-
-## ✨ Features
-
-- 🖥️ **Simple terminal interface** — no scripts required  
-- 🧩 Supports **CSS Selectors** and **XPath**
-- ⚡ Built-in actions:
-  - `fill` → type into fields  
-  - `click` → click elements  
-  - `press_enter` → simulate Enter key  
-  - `wait` → pause execution  
-  - `wait_visible` → wait for element to appear  
-  - `assert_text` → validate content
-- ✅ Automatic validation of **visibility** and **text assertions**
-- 📸 Screenshots saved for every step (and on errors)
-- 📊 Automatic **Excel** and **Word defect reports**
-- 🚗 Auto-installs browser drivers using `webdriver-manager`
-- 🧾 Organized output folders (`reports/`, `testplans/`, `screenshots/`)
-- 🔄 Works on **Windows**, **Linux**, and **macOS**
+> *“Enter the link. Define the steps. Selenite does the rest.”*
 
 ---
 
-## 🚀 Installation
+## 📑 Conteúdo
 
-```bash
-git clone https://github.com/YOUR_USER/selenite.git
-cd selenite
-pip install -r requirements.txt
-```
+- Visão geral
+- Funcionalidades
+- Tecnologias
+- Instalação
+- Como usar
+- Exemplo de plano de teste
+- Relatórios gerados
+- Ideal para
+- Roadmap
+- Contribuição
+- Licença
 
-▶️ How to Use
+---
 
-Run Selenite directly from your terminal:
+## 📌 Visão geral
 
-python selenite.py
+O **Selenite** transforma a automação de testes com Selenium em um processo **simples, rápido e acessível**, eliminando a necessidade de scripts.
 
+Você define **o que testar**, **como testar** e **em qual site**, e o Selenite executa tudo automaticamente, gerando **evidências visuais** e **relatórios profissionais**.
 
-You will be prompted with a menu:
+---
 
-Select an existing test plan (YAML file), or
+## ✨ Funcionalidades
 
-Create a new no-code test plan interactively
+- 🖥️ Interface simples via **terminal**
+- 🧩 Suporte a **CSS Selectors** e **XPath**
+- ⚡ Ações integradas:
+  - `fill` → preencher campos
+  - `click` → clicar em elementos
+  - `press_enter` → simular Enter
+  - `wait` → aguardar tempo
+  - `wait_visible` → aguardar elemento aparecer
+  - `assert_text` → validar texto
+- ✅ Validações automáticas de visibilidade e conteúdo
+- 📸 Screenshots automáticos (cada passo e erros)
+- 📊 Relatórios automáticos em **Excel**
+- 📕 Relatórios de defeitos em **Word**
+- 🚗 Instalação automática de drivers com `webdriver-manager`
+- 📂 Estrutura organizada:
+  - `testplans/`
+  - `screenshots/`
+  - `reports/`
+- 🔄 Compatível com **Windows**, **Linux** e **macOS**
 
-🧠 Example Workflow
+---
 
-Choose “Create New Custom Plan (No-Code)”
+## 🛠️ Tecnologias utilizadas
 
-Enter:
+- **Python 3.8+**
+- **Selenium 4**
+- **webdriver-manager**
+- **PyYAML**
+- **OpenPyXL**
+- **python-docx**
 
-Test name
+---
 
-Target URL
+🎯 Ideal para
+Perfil	Benefício
 
-Number of steps
+🧪 QAs Manuais	Automatizar testes repetitivos
 
-Define each step (action, selector, value, etc.)
+⚙️ Times Ágeis	Validação rápida em sprints
 
-Selenite saves your test plan to testplans/ and asks if you want to execute it.
+💼 Freelancers	Testar sites de clientes em minutos
 
-When executed:
+🎓 Estudantes	Aprender Selenium na prática
 
-Opens Chrome
-
-Runs each step automatically
-
-Takes screenshots
-
-Generates reports in /reports/
-
-📄 Example of a Test Plan (YAML)
-name: Login_Test
-url: https://example.com/login
-timeout: 20
-steps:
-  - action: fill
-    selector: "#username"
-    value: "demo_user"
-  - action: fill
-    selector: "#password"
-    value: "12345"
-  - action: click
-    selector: "button[type='submit']"
-  - action: wait_visible
-    selector: ".welcome-message"
-  - action: assert_text
-    selector: ".welcome-message"
-    contains: "Welcome"
-
-📊 Reports Generated
-
-After execution, Selenite automatically creates:
-
-📘 Excel Report
-<PLAN_NAME>_EXECUTION_PLAN.xlsx
-– All test steps with results (PASS/FAIL, duration, screenshots)
-
-📕 Word Report (Defects Only)
-<PLAN_NAME>_DEFECTS.docx
-– Only failed steps, with steps to reproduce, errors, and screenshots
-
-Reports are stored in:
-reports/<plan_name>_<timestamp>/
-
-🎯 Ideal For
-Role	Benefit
-🧪 Manual QAs	Automate repetitive web checks
-⚙️ Agile Teams	Quick validation during sprints
-💼 Freelancers	Verify client sites in minutes
-🎓 Students	Learn Selenium concepts practically
 🛠️ Roadmap
 
-🪟 GUI with Tkinter
+🪟 Interface gráfica (Tkinter)
 
-🌐 Web dashboard (Flask)
+🌐 Dashboard Web (Flask)
 
-📁 Multiple test scenarios per plan
+📁 Múltiplos cenários por plano
 
-🧾 Report export to HTML / PDF
+📄 Exportação de relatórios em HTML / PDF
 
-🤖 GitHub Actions integration
+🤖 Integração com GitHub Actions
 
-🤝 Contributing
+---
 
-Selenite is open-source and built for the testing community.
+## 👥 Contribuidores
 
-Found a bug? → Open an Issue
+<a href="https://github.com/FilipeHSAraujo/Selenite/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=FilipeHSAraujo/Selenite" />
+</a>
 
-Want to add a feature? → Send a Pull Request!
+O Selenite é open-source e feito para a comunidade de testes.
 
-📜 License
+🐞 Encontrou um bug? → Abra uma Issue
 
-This project is licensed under the MIT License — free to use, modify, and distribute.
+✨ Quer adicionar algo? → Envie um Pull Request
 
-💡 Selenite Philosophy
+---
 
-“A good tester doesn’t write code — they make the code work for them.”
+📜 Licença
 
-Selenite — Because testing doesn’t have to be complicated.
-Made with ❤️, Python, and automation by Filipe Araujo.
+Este projeto está licenciado sob a MIT License — livre para uso, modificação e distribuição.
