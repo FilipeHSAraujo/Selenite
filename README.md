@@ -108,4 +108,3 @@ Selenite is **open-source** and built for the testing community.
 ##  License
 
 This project is licensed under the **MIT License** — free to use, modify, and distribute.
-```
