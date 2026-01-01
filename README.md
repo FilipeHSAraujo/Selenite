@@ -1,4 +1,4 @@
-# 🌟 Selenite – No-Code Automated Testing Hub
+# Selenite – No-Code Automated Testing Hub
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
@@ -7,61 +7,60 @@
 
 > **Test websites in 3 clicks. No code required.**
 
-**Selenite** é uma ferramenta de **automação de testes web no-code**, construída com **Python + Selenium**, pensada para **QAs, testers, estudantes e equipes ágeis** que precisam validar websites de forma rápida — **sem escrever código**.
+**Selenite** is a **no-code web automation testing tool** built with **Python + Selenium**, designed for **QAs, testers, students, and agile teams** who need to quickly validate websites — **without writing any code**.
 
 > *“Enter the link. Define the steps. Selenite does the rest.”*
 
 ---
 
-## 📑 Conteúdo
-
-- Visão geral
-- Funcionalidades
-- Tecnologias
-- Instalação
-- Como usar
-- Exemplo de plano de teste
-- Relatórios gerados
-- Ideal para
+## Table of Contents
+- Overview
+- Features
+- Technologies
+- Installation
+- How to Use
+- Test Plan Example
+- Generated Reports
+- Who It's For
 - Roadmap
-- Contribuição
-- Licença
+- Contributing
+- License
 
 ---
 
-## 📌 Visão geral
+## Overview
 
-O **Selenite** transforma a automação de testes com Selenium em um processo **simples, rápido e acessível**, eliminando a necessidade de scripts.
+**Selenite** turns Selenium web automation into a **simple, fast, and accessible** process, eliminating the need for custom scripts.
 
-Você define **o que testar**, **como testar** e **em qual site**, e o Selenite executa tudo automaticamente, gerando **evidências visuais** e **relatórios profissionais**.
-
----
-
-## ✨ Funcionalidades
-
-- 🖥️ Interface simples via **terminal**
-- 🧩 Suporte a **CSS Selectors** e **XPath**
-- ⚡ Ações integradas:
-  - `fill` → preencher campos
-  - `click` → clicar em elementos
-  - `press_enter` → simular Enter
-  - `wait` → aguardar tempo
-  - `wait_visible` → aguardar elemento aparecer
-  - `assert_text` → validar texto
-- ✅ Validações automáticas de visibilidade e conteúdo
-- 📸 Screenshots automáticos (cada passo e erros)
-- 📊 Relatórios automáticos em **Excel**
-- 📕 Relatórios de defeitos em **Word**
-- 🚗 Instalação automática de drivers com `webdriver-manager`
-- 📂 Estrutura organizada:
-  - `testplans/`
-  - `screenshots/`
-  - `reports/`
-- 🔄 Compatível com **Windows**, **Linux** e **macOS**
+You define **what to test**, **how to test it**, and **on which site**, and Selenite handles everything automatically — generating **visual evidence** and **professional reports**.
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Features
+
+- Simple **terminal-based** interface
+- Full support for **CSS Selectors** and **XPath**
+- Built-in actions:
+  - `fill` → type into fields
+  - `click` → click elements
+  - `press_enter` → simulate Enter key
+  - `wait` → pause execution
+  - `wait_visible` → wait for element to appear
+  - `assert_text` → validate text content
+- Automatic validation of visibility and content
+- Automatic screenshots (every step + errors)
+- Auto-generated **Excel** execution reports
+- **Word** defect reports (steps to reproduce + screenshots)
+- Automatic driver installation with `webdriver-manager`
+- Clean folder structure:
+  - `testplans/` → your YAML plans
+  - `screenshots/` → visual evidence
+  - `reports/` → execution results
+- Fully compatible with **Windows**, **Linux**, and **macOS**
+
+---
+
+## Technologies Used
 
 - **Python 3.8+**
 - **Selenium 4**
@@ -72,45 +71,41 @@ Você define **o que testar**, **como testar** e **em qual site**, e o Selenite 
 
 ---
 
-🎯 Ideal para
-Perfil	Benefício
+##  Who It's For
 
-🧪 QAs Manuais	Automatizar testes repetitivos
-
-⚙️ Times Ágeis	Validação rápida em sprints
-
-💼 Freelancers	Testar sites de clientes em minutos
-
-🎓 Estudantes	Aprender Selenium na prática
-
-🛠️ Roadmap
-
-🪟 Interface gráfica (Tkinter)
-
-🌐 Dashboard Web (Flask)
-
-📁 Múltiplos cenários por plano
-
-📄 Exportação de relatórios em HTML / PDF
-
-🤖 Integração com GitHub Actions
+| Profile             | Benefit                                   |
+|---------------------|-------------------------------------------|
+|  Manual QAs         | Automate repetitive tests                 |
+|  Agile Teams        | Fast validation during sprints            |
+|  Freelancers        | Test client sites in minutes              |
+|  Students           | Learn Selenium in practice                |
 
 ---
 
-## 👥 Contribuidores
+##  Roadmap (Coming Soon)
+
+-  Graphical interface (Tkinter)
+-  Web dashboard (Flask)
+-  Multiple scenarios per plan
+-  Report export (HTML/PDF)
+-  GitHub Actions integration
+
+---
+
+##  Contributors
 
 <a href="https://github.com/FilipeHSAraujo/Selenite/graphs/contributors">
   <img src="https://contributors-img.firebaseapp.com/image?repo=FilipeHSAraujo/Selenite" />
 </a>
 
-O Selenite é open-source e feito para a comunidade de testes.
+Selenite is **open-source** and built for the testing community.
 
-🐞 Encontrou um bug? → Abra uma Issue
-
-✨ Quer adicionar algo? → Envie um Pull Request
+ Found a bug? → Open an Issue  
+ Want to add something? → Send a Pull Request
 
 ---
 
-📜 Licença
+##  License
 
-Este projeto está licenciado sob a MIT License — livre para uso, modificação e distribuição.
+This project is licensed under the **MIT License** — free to use, modify, and distribute.
+```
